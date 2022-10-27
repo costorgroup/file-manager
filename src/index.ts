@@ -1,4 +1,4 @@
-import { merge } from "lodash";
+import _ from "lodash";
 
 export type TPickOptions = {
   multiple?: boolean;
@@ -14,7 +14,7 @@ export const pick = async (options: TPickOptions = {}) =>
     };
 
     // Merged options
-    const mergedOptions = merge(defaultOptions, options);
+    const mergedOptions = _.merge(defaultOptions, options);
 
     // Creating element
     const virtualFilePickerElement = document.createElement("input");

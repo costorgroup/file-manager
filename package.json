@@ -1,6 +1,6 @@
 {
   "name": "@costor/file-manager",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CostorGroup File Manager",
   "main": "src/index.ts",
   "files": [
