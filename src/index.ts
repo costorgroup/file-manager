@@ -1,10 +1,4 @@
-import _ from "lodash";
-
-export type TPickOptions = {
-  multiple?: boolean;
-};
-
-export type TReadAs = "text" | "data-url" | "array-buffer" | "binary-string";
+import { TPickOptions, TReadAs } from "types";
 
 export const pick = async (options: TPickOptions = {}) =>
   new Promise<File | File[]>((resolve, reject) => {
@@ -14,7 +8,7 @@ export const pick = async (options: TPickOptions = {}) =>
     };
 
     // Merged options
-    const mergedOptions = _.merge(defaultOptions, options);
+    const mergedOptions = { ...defaultOptions, ...options };
 
     // Creating element
     const virtualFilePickerElement = document.createElement("input");
