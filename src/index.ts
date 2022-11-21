@@ -1,4 +1,4 @@
-import { TPickOptions, TReadAs } from "types";
+import { TPickOptions, TReadAs } from "./types";
 
 export const pick = async (options: TPickOptions = {}) =>
   new Promise<File | File[]>((resolve, reject) => {
