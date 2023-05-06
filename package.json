@@ -1,0 +1,32 @@
+{
+  "name": "@costorgroup/file-manager",
+  "version": "1.0.0",
+  "description": "The package includes methods for opening a file picker dialog, reading the selected file, and saving the file, which can be easily integrated into web applications. The supported file formats include text files, images, audio files, and more.",
+  "main": "./lib/index.js",
+  "keywords": [
+    "file",
+    "manager",
+    "javascript",
+    "typescript",
+    "npm",
+    "module"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "CostorGroup",
+  "license": "MIT",
+  "homepage": "https://github.com/costorgroup/file-manager#readme",
+  "bugs": {
+    "url": "https://github.com/costorgroup/file-manager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/costorgroup/file-manager.git"
+  },
+  "scripts": {
+    "test": "echo 'OK'"
+  }
+}
+
