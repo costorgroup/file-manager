@@ -55,11 +55,10 @@ export const read = (file: File, readAs: TFileManagerReadFormat = 'text') =>
     }
   });
 
-export const save = (name: string, data: string, options?: BlobPropertyBag) => {
-  const file = new Blob([data], options);
+export const save = (file: File, fileName: string) => {
   const virtualAnchorElement = document.createElement('a');
   virtualAnchorElement.href = URL.createObjectURL(file);
-  virtualAnchorElement.download = name;
+  virtualAnchorElement.download = fileName;
   virtualAnchorElement.click();
 };
 
