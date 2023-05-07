@@ -1,16 +1,18 @@
 export type TFileManagerPickOptions = {
   multiple: boolean;
+  accept: string;
 };
 
 export type TFileManagerReadFormat = 'text' | 'data-url' | 'array-buffer' | 'binary-string';
 
 export const pick = async (options: Partial<TFileManagerPickOptions> = {}) =>
   new Promise((resolve, reject) => {
-    const { multiple }: TFileManagerPickOptions = Object.assign({ multiple: false }, options);
+    const { multiple, accept }: TFileManagerPickOptions = Object.assign({ multiple: false, accept: '*' }, options);
 
     const virtualFilePickerElement = document.createElement('input');
     virtualFilePickerElement.type = 'file';
     virtualFilePickerElement.multiple = multiple;
+    virtualFilePickerElement.accept = accept;
     virtualFilePickerElement.addEventListener('change', (e: Event) => {
       const { files } = e.target as HTMLInputElement;
 
